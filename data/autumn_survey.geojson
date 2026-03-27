@@ -1,11 +1,73 @@
 {
-"type": "FeatureCollection",
-"name": "autumn_survey",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"xy_coordinate_resolution": 1e-06,
-"features": [
-{ "type": "Feature", "properties": { "site_id": "{60fb94ad-2921-4699-b4e6-cceffe2368f8}", "name": "棒ノ嶺", "status": "青葉", "radius_m": 200.0, "date": "2026-03-18", "photo": "DSC_0058.JPG", "memo": null }, "geometry": { "type": "Point", "coordinates": [ 139.155095, 35.858712, 0.0 ] } },
-{ "type": "Feature", "properties": { "site_id": "{60fb94ad-2921-4699-b4e6-cceffe2368f8}", "name": "棒ノ嶺", "status": "色づき始め", "radius_m": 200.0, "date": "2026-03-19", "photo": "20161105-22.jpg", "memo": null }, "geometry": { "type": "Point", "coordinates": [ 139.155095, 35.858712, 0.0 ] } },
-{ "type": "Feature", "properties": { "site_id": "{f8c9037d-0ed7-44ad-bf2a-d50618d08b2c}", "name": "平台山", "status": "見頃", "radius_m": 500.0, "date": "2026-03-18", "photo": "DSC_0306_1.JPG", "memo": null }, "geometry": { "type": "Point", "coordinates": [ 139.170478, 35.862387, 0.0 ] } }
-]
+  "type": "FeatureCollection",
+  "name": "autumn_survey",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "xy_coordinate_resolution": 1e-06,
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{60fb94ad-2921-4699-b4e6-cceffe2368f8}",
+        "name": "棒ノ嶺",
+        "status": "青葉",
+        "radius_m": 200.0,
+        "date": "2026-03-18",
+        "photo": "https://drive.google.com/thumbnail?id=1y4CORVVEW7IKhJKvuXWCXY5Q8W9ss5Ot&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.155095,
+          35.858712,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{60fb94ad-2921-4699-b4e6-cceffe2368f8}",
+        "name": "棒ノ嶺",
+        "status": "色づき始め",
+        "radius_m": 200.0,
+        "date": "2026-03-19",
+        "photo": "https://drive.google.com/thumbnail?id=17lKs74hRXwQXvak6LIjIvHTCBWPHKjSe&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.155095,
+          35.858712,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{f8c9037d-0ed7-44ad-bf2a-d50618d08b2c}",
+        "name": "平台山",
+        "status": "見頃",
+        "radius_m": 500.0,
+        "date": "2026-03-18",
+        "photo": "https://drive.google.com/thumbnail?id=1GLBN7G4sCy9zZLtT6lXr89NQjLUYWui8&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.170478,
+          35.862387,
+          0.0
+        ]
+      }
+    }
+  ]
 }

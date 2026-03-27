@@ -117,6 +117,30 @@
                 <option value="曇">曇り</option><option value="雨">雨</option><option value="雪">雪</option>
             </select>
         </div>
+        <div class="control-group" id="filter-wind-str-group" style="display: none;">
+            <label>風力</label>
+            <select id="filter-wind-str" onchange="applyFilters()">
+                <option value="ALL" selected>すべて表示</option>
+                <option value="強">強</option>
+                <option value="中">中</option>
+                <option value="弱">弱</option>
+                <option value="無風">無風</option>
+            </select>
+        </div>
+        <div class="control-group" id="filter-wind-dir-group" style="display: none;">
+            <label>風向</label>
+            <select id="filter-wind-dir" onchange="applyFilters()">
+                <option value="ALL" selected>すべて表示</option>
+                <option value="北">北</option>
+                <option value="北東">北東</option>
+                <option value="東">東</option>
+                <option value="南東">南東</option>
+                <option value="南">南</option>
+                <option value="南西">南西</option>
+                <option value="西">西</option>
+                <option value="北西">北西</option>
+            </select>
+        </div>
         <div class="control-group" id="filter-floor-group" style="display: none;">
             <label>階層</label>
             <select id="filter-floor" onchange="applyFilters()">
@@ -330,6 +354,8 @@
         const rfGroup = document.getElementById('filter-rf-group');
         const natureGroup = document.getElementById('filter-nature-group');
         const weatherGroup = document.getElementById('filter-weather-group');
+        const windDirGroup = document.getElementById('filter-wind-dir-group'); 
+        const windStrGroup = document.getElementById('filter-wind-str-group'); 
         const floorGroup = document.getElementById('filter-floor-group');
 
         if (mapTheme === 'flower' || mapTheme === 'autumn') {
@@ -338,14 +364,20 @@
         } else {
             rfGroup.style.display = 'block'; natureGroup.style.display = 'none';
             if (mapTheme === 'indoor') {
-                weatherGroup.style.display = 'none';
+                weatherGroup.style.display = 'none'; 
+                windDirGroup.style.display = 'none'; 
+                windStrGroup.style.display = 'none'; 
                 floorGroup.style.display = 'block';
                 populateFloorDropdown();
             } else if (mapTheme === 'outdoor') {
-                weatherGroup.style.display = 'block';
+                weatherGroup.style.display = 'block'; 
+                windDirGroup.style.display = 'block'; 
+                windStrGroup.style.display = 'block'; 
                 floorGroup.style.display = 'none';
             } else { 
-                weatherGroup.style.display = 'block';
+                weatherGroup.style.display = 'block'; 
+                windDirGroup.style.display = 'block'; 
+                windStrGroup.style.display = 'block'; 
                 floorGroup.style.display = 'none'; 
             }
         }
@@ -356,6 +388,8 @@
         const mapTheme = document.getElementById('map-theme').value;
         const selectedCarrier = document.getElementById('filter-carrier').value;
         const selectedWeather = document.getElementById('filter-weather').value;
+        const selectedWindDir = document.getElementById('filter-wind-dir').value; 
+        const selectedWindStr = document.getElementById('filter-wind-str').value; 
         const selectedSpecies = document.getElementById('filter-species').value;
         const selectedFloor = document.getElementById('filter-floor').value;
 
@@ -424,10 +458,24 @@
                 const carrier = getProp(props, 'carrier');
                 if (selectedCarrier !== "ALL" && carrier !== selectedCarrier) return false;
                 
-                if (surveyType === 'outdoor' && selectedWeather !== "ALL") {
-                    const weather = getProp(props, 'weather') || '';
-                    if (weather !== selectedWeather && !weather.includes(selectedWeather)) return false;
+                if (surveyType === 'outdoor') {
+                    
+                    if (selectedWeather !== "ALL") {
+                        const weather = getProp(props, 'weather') || '';
+                        if (weather !== selectedWeather && !weather.includes(selectedWeather)) return false;
+                    }
+                    
+                    if (selectedWindDir !== "ALL") {
+                        const windDir = getProp(props, 'winddirection') || getProp(props, '風向') || '';
+                        if (windDir !== selectedWindDir) return false;
+                    }
+                    
+                    if (selectedWindStr !== "ALL") {
+                        const windStr = getProp(props, 'windstrength') || getProp(props, '風力') || '';
+                        if (windStr !== selectedWindStr) return false;
+                    }
                 }
+                
                 if (surveyType === 'indoor' && selectedFloor !== "ALL") { 
                     const floor = getProp(props, 'floor') || getProp(props, '階層') || '';
                     if (floor !== selectedFloor) return false; 
@@ -440,11 +488,85 @@
             return true;
         });
 
+        const finalFeatures = [];
+        const rfGroups = {};
+
+        filteredFeatures.forEach(feature => {
+            const props = feature.properties;
+            const surveyType = props.surveyType;
+
+            if (surveyType === 'indoor' || surveyType === 'outdoor') {
+                // Point(既存の屋内データなど)とPolygon(新しい屋外データ)の両方の座標に対応
+                let key = null;
+                if (feature.geometry.type === 'Polygon') {
+                    const c = feature.geometry.coordinates[0][0]; // [lon, lat]
+                    key = `${c[0].toFixed(6)}_${c[1].toFixed(6)}`;
+                } else if (feature.geometry.type === 'Point') {
+                    const lon = feature.geometry.coordinates[0];
+                    const lat = feature.geometry.coordinates[1];
+                    const grid = 0.00003;
+                    const epsilon = 1e-9;
+                    const snapLat = Math.floor((lat / grid) + epsilon) * grid;
+                    const snapLng = Math.floor((lon / grid) + epsilon) * grid;
+                    key = `${snapLng.toFixed(6)}_${snapLat.toFixed(6)}`;
+                }
+
+                if (key) {
+                    // 座標キーごとにデータをまとめる
+                    if (!rfGroups[key]) {
+                        rfGroups[key] = { baseFeature: feature, levels: [], weathers: new Set(), windDirs: new Set(), windStrs: new Set() };
+                    }
+                    const level = parseInt(getProp(props, 'signallevel'), 10);
+                    if (!isNaN(level)) rfGroups[key].levels.push(level);
+                    
+                    const w = getProp(props, 'weather') || getProp(props, '天気');
+                    if (w) rfGroups[key].weathers.add(w);
+                    const wd = getProp(props, 'winddirection') || getProp(props, '風向');
+                    if (wd) rfGroups[key].windDirs.add(wd);
+                    const ws = getProp(props, 'windstrength') || getProp(props, '風力');
+                    if (ws) rfGroups[key].windStrs.add(ws);
+                } else {
+                    finalFeatures.push(feature);
+                }
+            } else {
+                finalFeatures.push(feature); // 植物系のデータはそのまま追加
+            }
+        });
+
+        // まとめたデータから中央値を計算し、新しいFeatureを作成
+        Object.values(rfGroups).forEach(group => {
+            const clonedFeature = JSON.parse(JSON.stringify(group.baseFeature)); // ディープコピー
+            if (group.levels.length > 0) {
+                // 中央値の計算
+                group.levels.sort((a, b) => a - b);
+                const mid = Math.floor(group.levels.length / 2);
+                const median = group.levels.length % 2 === 0 
+                    ? Math.round((group.levels[mid - 1] + group.levels[mid]) / 2) 
+                    : group.levels[mid];
+                
+                // プロパティの更新 (大文字小文字の重複を防ぐため一度削除)
+                Object.keys(clonedFeature.properties).forEach(k => {
+                    const lowerK = k.toLowerCase();
+                    if (['signallevel', 'weather', 'winddirection', 'windstrength'].includes(lowerK)) {
+                        delete clonedFeature.properties[k];
+                    }
+                });
+                
+                clonedFeature.properties.SignalLevel = median;
+                // 重なった条件をカンマ区切りで結合 (例: "快晴, 曇り")
+                clonedFeature.properties.Weather = Array.from(group.weathers).filter(Boolean).join(', ') || '不明';
+                clonedFeature.properties.WindDirection = Array.from(group.windDirs).filter(Boolean).join(', ');
+                clonedFeature.properties.WindStrength = Array.from(group.windStrs).filter(Boolean).join(', ');
+                clonedFeature.properties.isMerged = group.levels.length > 1; // 複数マージされたかどうかのフラグ
+            }
+            finalFeatures.push(clonedFeature);
+        });
+
         if (currentLayer) map.removeLayer(currentLayer);
 
         currentLayer = L.geoJSON({
             "type": "FeatureCollection",
-            "features": filteredFeatures
+            "features": finalFeatures
         }, {
             style: function (feature) {
                 if (feature.geometry.type !== 'Point') {
@@ -514,6 +636,10 @@
                         const windDir = getProp(props, 'winddirection') || getProp(props, '風向') || '';
                         const windStr = getProp(props, 'windstrength') || getProp(props, '風力') || '';
                         const windDisplay = windDir ? `${windDir} / ${windStr}` : '-';
+                        
+                        if (props.isMerged) {
+                            popupContent += `<div style="color:#e67e22; font-size:11px; margin-bottom:4px; font-weight:bold;">※複数条件の中央値です</div>`;
+                        }
                         
                         popupContent += `<b>☁️ 天気:</b> ${weather}<br>`;
                         popupContent += `<b>🌬️ 風:</b> ${windDisplay}<br>`;
