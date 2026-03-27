@@ -88,6 +88,26 @@
           0.0
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{64bf48f0-8bac-4278-b4fa-2d72d1bd0db7}",
+        "name": "カエデ",
+        "status": "落葉",
+        "radius_m": 200.0,
+        "date": "2026-03-28",
+        "photo": "files/20260327180601280_20260131_101019.jpg",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.159697,
+          35.866068,
+          0.0
+        ]
+      }
     }
   ]
 }
