@@ -84,6 +84,25 @@
           35.858756
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{3ab685d8-7aae-4c56-8906-6899ac2461d7}",
+        "name": "アカネ",
+        "status": "散り始め",
+        "radius_m": 200.0,
+        "date": "2026-03-28",
+        "photo": "files/20260327180432988_PXL_20260321_054224381.jpg",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.167325,
+          35.855462
+        ]
+      }
     }
   ]
 }
