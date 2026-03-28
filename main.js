@@ -4,7 +4,7 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
     if (typeof THEME_CONFIG !== 'undefined') {
         Object.keys(THEME_CONFIG).forEach(theme => {
             if (!THEME_CONFIG[theme]) {
-                const opt = document.querySelector(`#map-theme option[value="${theme}"]`);
+                const opt = document.querySelector("#map-theme option[value='" + theme + "']");
                 if (opt) opt.remove();
             }
         });
@@ -56,13 +56,14 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
         const speciesFilter = document.getElementById('filter-species') ? document.getElementById('filter-species').value : 'ALL';
         const animalName = speciesFilter !== 'ALL' ? speciesFilter : '動物・鳥類';
 
-        const popupContent = `
-            <div style="text-align:center; margin-bottom:8px; padding-bottom:5px; border-bottom:2px dashed #ccc;">
-                <b><span style="font-size:16px; color:#2c3e50;">🐾 ${animalName} 計 ${markers.length} 件</span></b><br>
-                <span style="font-size:11px; color:#666;">※このエリアの最新記録を表示</span>
-            </div>
-            ${latestMarker.getPopup().getContent()}
-        `;
+        // ★修正：エラーの原因になりやすい複雑な埋め込みを、安全な足し算（+）にしました
+        const popupContent = 
+            '<div style="text-align:center; margin-bottom:8px; padding-bottom:5px; border-bottom:2px dashed #ccc;">' +
+                '<b><span style="font-size:16px; color:#2c3e50;">🐾 ' + animalName + ' 計 ' + markers.length + ' 件</span></b><br>' +
+                '<span style="font-size:11px; color:#666;">※このエリアの最新記録を表示</span>' +
+            '</div>' +
+            latestMarker.getPopup().getContent();
+            
         L.popup().setLatLng(a.layer.getLatLng()).setContent(popupContent).openOn(map);
     });
 
@@ -79,7 +80,7 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
         { url: 'data/indoor_survey.geojson', type: 'indoor' },
         { url: 'data/flower_survey.geojson', type: 'flower' }, 
         { url: 'data/autumn_survey.geojson', type: 'autumn' },
-        { url: 'data/animal_survey.geojson', type: 'animal' } // ★追加
+        { url: 'data/animal_survey.geojson', type: 'animal' } 
     ];
 
     Promise.all(dataSources.map(source => 
@@ -219,7 +220,7 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
         const floorSet = new Set();
         allFeatures.forEach(f => {
             if (f.properties.surveyType === 'indoor') {
-                const floor = getProp(f.properties, 'floor') || getProp(f.properties, '階層');
+                const floor = getProp(f.properties, 'floor') || getProp(props, '階層');
                 if (floor) floorSet.add(floor);
             }
         });
@@ -296,7 +297,6 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
         const selectedWindDir = windDirSelect ? windDirSelect.value : 'ALL';
         const selectedFloor = document.getElementById('filter-floor') ? document.getElementById('filter-floor').value : 'ALL';
 
-        // 動物・植物系の絞り込み
         const selectedSpecies = document.getElementById('filter-species') ? document.getElementById('filter-species').value : 'ALL';
         const selectedNatureWeather = document.getElementById('filter-nature-weather') ? document.getElementById('filter-nature-weather').value : 'ALL';
         const selectedDate = document.getElementById('filter-date') ? document.getElementById('filter-date').value : '';
@@ -307,7 +307,6 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
         const groupedNatureFeatures = []; 
         const otherFeatures = [];
 
-        // 植物（花・紅葉）の近接ポイント結合処理
         allFeatures.forEach(f => {
             const props = f.properties;
             const surveyType = props.surveyType;
@@ -523,65 +522,72 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
             onEachFeature: function (feature, layer) {
                 const props = feature.properties;
                 const surveyType = props.surveyType;
-                let popupContent = `<div style="font-size: 13px;">`;
+                let popupContent = '<div style="font-size: 13px;">';
                 
                 if ((surveyType === 'flower' || surveyType === 'autumn' || surveyType === 'animal') && isStale(getProp(props, 'date'))) {
-                    popupContent += `<div style="color:red; font-weight:bold; font-size:12px; margin-bottom:5px;">⚠️ 1週間以上前の情報です</div>`;
+                    popupContent += '<div style="color:red; font-weight:bold; font-size:12px; margin-bottom:5px;">⚠️ 1週間以上前の情報です</div>';
                 }
 
                 const photoUrl = getProp(props, 'photo') || getProp(props, '写真');
                 if (photoUrl && photoUrl.startsWith('http')) {
-                    popupContent += `<div onclick="openModal('${photoUrl}')" class="popup-img-box" style="background-image: url('${photoUrl}');"></div>`;
+                    popupContent += '<div onclick="openModal(\'' + photoUrl + '\')" class="popup-img-box" style="background-image: url(\'' + photoUrl + '\');"></div>';
                 }
                 
+                // ★修正：エラーの原因になりやすい複雑な埋め込みを、安全な文字列結合（+）にしました
                 if (surveyType === 'flower' || surveyType === 'autumn' || surveyType === 'animal') {
                     let title = '🐾 動物・鳥類観察';
                     if (surveyType === 'flower') title = '🌸 開花状況';
                     if (surveyType === 'autumn') title = '🍁 紅葉状況';
 
-                    popupContent += `<b>${title}</b><hr>`;
-                    popupContent += `<b>種類:</b> ${getProp(props, 'name') || getProp(props, '名前') || '不明'}<br>`;
+                    const nameStr = getProp(props, 'name') || getProp(props, '名前') || '不明';
+                    
+                    popupContent += '<b>' + title + '</b><hr>';
+                    popupContent += '<b>種類:</b> ' + nameStr + '<br>';
                     
                     if(surveyType !== 'animal') {
-                        popupContent += `<b>状況:</b> <span style="font-size:15px; font-weight:bold;">${getProp(props, 'status') || '不明'}</span><br>`;
+                        const statusStr = getProp(props, 'status') || '不明';
+                        popupContent += '<b>状況:</b> <span style="font-size:15px; font-weight:bold;">' + statusStr + '</span><br>';
                     }
                     
-                    popupContent += `<b>確認日:</b> ${getProp(props, 'date') || getProp(props, '日付') || '-'}<br>`;
+                    const dateStr = getProp(props, 'date') || getProp(props, '日付') || '-';
+                    popupContent += '<b>確認日:</b> ' + dateStr + '<br>';
                     
                     if (surveyType === 'animal') {
-                        const w = getProp(props, 'weather') || getProp(props, '天気');
-                        if (w) popupContent += `<b>天気:</b> ${w}<br>`;
+                        const wStr = getProp(props, 'weather') || getProp(props, '天気');
+                        if (wStr) popupContent += '<b>天気:</b> ' + wStr + '<br>';
                     }
 
-                    const memo = getProp(props, 'memo') || getProp(props, 'メモ');
-                    if(memo) popupContent += `<br><b>📝 メモ:</b><br><span style="color:#555;">${memo}</span>`;
+                    const memoStr = getProp(props, 'memo') || getProp(props, 'メモ');
+                    if(memoStr) popupContent += '<br><b>📝 メモ:</b><br><span style="color:#555;">' + memoStr + '</span>';
                 } 
                 else {
-                    popupContent += `<b>📡 キャリア:</b> ${getProp(props, 'carrier') || '不明'}<br>`;
-                    popupContent += `<b>📶 電波強度:</b> ${getProp(props, 'signallevel') || '-'}<br>`;
+                    const carrierStr = getProp(props, 'carrier') || '不明';
+                    const sigStr = getProp(props, 'signallevel') || '-';
+                    popupContent += '<b>📡 キャリア:</b> ' + carrierStr + '<br>';
+                    popupContent += '<b>📶 電波強度:</b> ' + sigStr + '<br>';
                     
                     if (surveyType === 'outdoor') {
-                        const weather = getProp(props, 'weather') || getProp(props, '天気') || '不明';
-                        const windDir = getProp(props, 'winddirection') || getProp(props, '風向') || '';
-                        const windStr = getProp(props, 'windstrength') || getProp(props, '風力') || '';
-                        const windDisplay = windDir ? `${windDir} / ${windStr}` : '-';
+                        const weatherStr = getProp(props, 'weather') || getProp(props, '天気') || '不明';
+                        const windDirStr = getProp(props, 'winddirection') || getProp(props, '風向') || '';
+                        const windStrVal = getProp(props, 'windstrength') || getProp(props, '風力') || '';
+                        const windDisplay = windDirStr ? (windDirStr + ' / ' + windStrVal) : '-';
                         
                         if (props.isMerged) {
-                            popupContent += `<div style="color:#e67e22; font-size:11px; margin-bottom:4px; font-weight:bold;">※複数条件の中央値です</div>`;
+                            popupContent += '<div style="color:#e67e22; font-size:11px; margin-bottom:4px; font-weight:bold;">※複数条件の中央値です</div>';
                         }
                         
-                        popupContent += `<b>☁️ 天気:</b> ${weather}<br>`;
-                        popupContent += `<b>🌬️ 風:</b> ${windDisplay}<br>`;
+                        popupContent += '<b>☁️ 天気:</b> ' + weatherStr + '<br>';
+                        popupContent += '<b>🌬️ 風:</b> ' + windDisplay + '<br>';
                     } 
                     if (surveyType === 'indoor') {
-                        const building = getProp(props, 'building') || getProp(props, '建物');
-                        const floor = getProp(props, 'floor') || getProp(props, '階層');
-                        if(building) popupContent += `<b>🏠 建物:</b> ${building}<br>`;
-                        if(floor) popupContent += `<b>🏢 階層:</b> ${floor}<br>`;
+                        const buildingStr = getProp(props, 'building') || getProp(props, '建物');
+                        const floorStr = getProp(props, 'floor') || getProp(props, '階層');
+                        if(buildingStr) popupContent += '<b>🏠 建物:</b> ' + buildingStr + '<br>';
+                        if(floorStr) popupContent += '<b>🏢 階層:</b> ' + floorStr + '<br>';
                     }
                 }
                 
-                popupContent += `</div>`;
+                popupContent += '</div>';
                 const maxW = window.innerWidth < 600 ? 220 : 300;
                 layer.bindPopup(popupContent, { minWidth: 150, maxWidth: maxW });
             }
@@ -609,7 +615,7 @@ function toggleMenu() { document.getElementById('ui-panel').classList.toggle('sh
     }
 
     function openModal(url) {
-        document.getElementById("modalImage").style.backgroundImage = `url('${url}')`;
+        document.getElementById("modalImage").style.backgroundImage = "url('" + url + "')";
         document.getElementById("imageModal").style.display = "block";
     }
 
