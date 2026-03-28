@@ -1,13 +1,21 @@
     function toggleMenu() { document.getElementById('ui-panel').classList.toggle('show'); }
     function toggleLegend() { document.getElementById('legend-panel').classList.toggle('show'); }
 
+    if (typeof THEME_CONFIG !== 'undefined') {
+        Object.keys(THEME_CONFIG).forEach(theme => {
+            if (!THEME_CONFIG[theme]) {
+                const opt = document.querySelector(`#map-theme option[value="${theme}"]`);
+                if (opt) opt.remove();
+            }
+        });
+    }
+
     const urlParams = new URLSearchParams(window.location.search);
     const startLat = parseFloat(urlParams.get('lat')) || 36.3992; 
     const startLng = parseFloat(urlParams.get('lng')) || 137.7152; 
     const startZoom = parseInt(urlParams.get('zoom')) || 18; 
     const startTheme = urlParams.get('theme'); // ★追加: URLからthemeパラメータを取得
 
-    // ★追加: 取得したテーマがプルダウンの選択肢に存在すればセットする
     if (startTheme) {
         const themeSelect = document.getElementById('map-theme');
         if (Array.from(themeSelect.options).some(opt => opt.value === startTheme)) {
@@ -93,8 +101,14 @@
     function updateLegend(mapTheme) {
         const panel = document.getElementById('legend-panel');
         let html = '';
+
+        // config.jsでそのテーマが有効(true)かどうかを判定する関数
+        const isActive = (theme) => {
+            return typeof THEME_CONFIG === 'undefined' || THEME_CONFIG[theme] !== false;
+        };
         
-        if (mapTheme === 'indoor' || mapTheme === 'outdoor' || mapTheme === 'ALL') {
+        // 📶 電波強度の凡例 (indoor または outdoor が有効な場合のみ表示)
+        if ((mapTheme === 'indoor' || mapTheme === 'outdoor' || mapTheme === 'ALL') && (isActive('indoor') || isActive('outdoor'))) {
             html += `<div class="legend-title">📶 電波強度</div>
                 <div class="legend-item"><div class="color-box" style="background:#00FF00;"></div>4 (非常に良好)</div>
                 <div class="legend-item"><div class="color-box" style="background:#FFFF00;"></div>3 (良好)</div>
@@ -104,8 +118,9 @@
                 <div class="legend-item"><div class="color-box" style="background:#1E90FF;"></div>衛星 (Starlink等)</div>`;
         }
         
-        if (mapTheme === 'flower' || mapTheme === 'ALL') {
-            if (mapTheme === 'ALL') html += `<div style="margin:12px 0; border-top:1px solid #ccc;"></div>`;
+        // 🌸 開花状況の凡例
+        if ((mapTheme === 'flower' || mapTheme === 'ALL') && isActive('flower')) {
+            if (html !== '') html += `<div style="margin:12px 0; border-top:1px solid #ccc;"></div>`;
             html += `<div class="legend-title">🌸 開花状況</div>
                 <div class="legend-item"><div class="color-box circle-box" style="background:#32CD32;"></div>つぼみ</div>
                 <div class="legend-item"><div class="color-box circle-box" style="background:#FFB6C1;"></div>咲き始め</div>
@@ -114,8 +129,9 @@
                 <div class="legend-item"><div class="color-box circle-box" style="background:#8B4513;"></div>終了・葉桜</div>`;
         }
         
-        if (mapTheme === 'autumn' || mapTheme === 'ALL') {
-            if (mapTheme === 'ALL') html += `<div style="margin:12px 0; border-top:1px solid #ccc;"></div>`;
+        // 🍁 紅葉状況の凡例
+        if ((mapTheme === 'autumn' || mapTheme === 'ALL') && isActive('autumn')) {
+            if (html !== '') html += `<div style="margin:12px 0; border-top:1px solid #ccc;"></div>`;
             html += `<div class="legend-title">🍁 紅葉状況</div>
                 <div class="legend-item"><div class="color-box circle-box" style="background:#228B22;"></div>青葉・緑葉</div>
                 <div class="legend-item"><div class="color-box circle-box" style="background:#FFA500;"></div>色づき始め</div>
@@ -410,13 +426,14 @@
                 
                 if (surveyType === 'flower' || surveyType === 'autumn') {
                     const isOld = isStale(getProp(props, 'date'));
-                    const opacity = isOld ? 0.3 : 0.9;
+                    const fillOp = isOld ? 0.1 : 0.6;
+                    const lineOp = isOld ? 0.3 : 0.8;
 
                     const radiusMeters = parseFloat(getProp(props, 'radius_m'));
                     if (!isNaN(radiusMeters) && radiusMeters > 0) {
-                        return L.circle(latlng, { radius: radiusMeters, color: '#fff', weight: 1, fillColor: bgColor, fillOpacity: opacity, opacity: opacity });
+                        return L.circle(latlng, { radius: radiusMeters, color: '#fff', weight: 1.5, fillColor: bgColor, fillOpacity: fillOp, opacity: lineOp });
                     } else {
-                        return L.circleMarker(latlng, { radius: 8, color: '#fff', weight: 1, fillColor: bgColor, fillOpacity: opacity, opacity: opacity });
+                        return L.circleMarker(latlng, { radius: 8, color: '#fff', weight: 1.5, fillColor: bgColor, fillOpacity: fillOp, opacity: lineOp });
                     }
                 } else {
                     const grid = 0.00003; 
