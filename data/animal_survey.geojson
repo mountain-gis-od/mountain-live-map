@@ -1,11 +1,64 @@
 {
-"type": "FeatureCollection",
-"name": "animal_survey",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"xy_coordinate_resolution": 1e-06,
-"features": [
-{ "type": "Feature", "properties": { "name": "シカ", "date": "2026-03-23", "weather": "晴れ", "memo": "オス", "photo": "DCIM/animal-survey_20260328170819990.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.159598, 35.85692 ] } },
-{ "type": "Feature", "properties": { "name": "シカ", "date": "2026-03-24", "weather": "曇り", "memo": "メス", "photo": "DCIM/animal-survey_20260328170857187.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.165042, 35.860554 ] } },
-{ "type": "Feature", "properties": { "name": "カモシカ", "date": "2026-03-25", "weather": "雨", "memo": null, "photo": "DCIM/animal-survey_20260328170939713.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.159745, 35.856378 ] } }
-]
+  "type": "FeatureCollection",
+  "name": "animal_survey",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "xy_coordinate_resolution": 1e-06,
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "シカ",
+        "date": "2026-03-23",
+        "weather": "晴れ",
+        "memo": "オス",
+        "photo": "https://drive.google.com/thumbnail?id=15iJBeJW5X0IJWdLO_WuP_QRgeZTPJnAj&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.159598,
+          35.85692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "シカ",
+        "date": "2026-03-24",
+        "weather": "曇り",
+        "memo": "メス",
+        "photo": "https://drive.google.com/thumbnail?id=1Bzw6wWXzWeasskHN1TtVC-Y30lVnE3Nd&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.165042,
+          35.860554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "カモシカ",
+        "date": "2026-03-25",
+        "weather": "雨",
+        "memo": null,
+        "photo": "https://drive.google.com/thumbnail?id=1U0N3yQ2Rw0ITD920UQVhAWLNASet-OrV&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.159745,
+          35.856378
+        ]
+      }
+    }
+  ]
 }

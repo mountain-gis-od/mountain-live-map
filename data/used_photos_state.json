@@ -1,15 +1,16 @@
 {
-  "ids": [],
+  "ids": [
+    "1ivOOOBN3LKVikxVt5LRFkBn4gFMMA9hv",
+    "1jRLnteUSXoupshbkwL10Xm5PxdhHXGqW",
+    "1LKBA6auhMIDpMP57aumGTux0Yw0FlEjG",
+    "1wIYcCObKKKdT9wqbb5zOqzpQtgUSsu49",
+    "16pm3a_N0DdFKhQ_M6CMlf1htZ-gwWTyG",
+    "1sVtATtUIOO2zshf1NEy0McRMbpRrLzrl",
+    "14z-yV_dzHgnsQL0eIAM0qHtwPgnCKREh"
+  ],
   "filenames": [
-    "20260328040214733_PXL_20260321_062730394.jpg",
-    "animal-survey_20260328170939713.jpg",
-    "autumn-survey_20260328122815716_20260131_094525.jpg",
-    "autumn-survey_20260328133639898_PXL_20260321_054224381.jpg",
-    "20260328032530032_20260131_115717.jpg",
-    "animal-survey_20260328170819990.jpg",
-    "autumn-survey_20260328130031931_1743825623722.jpg",
     "animal-survey_20260328170857187.jpg",
-    "20260328032108420_20260131_104319.jpg",
-    "autumn-survey_20260328125609867_20260131_114447.jpg"
+    "animal-survey_20260328170819990.jpg",
+    "animal-survey_20260328170939713.jpg"
   ]
 }
