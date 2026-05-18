@@ -29063,6 +29063,1488 @@
         "coordinates": [
           [
             [
+              137.7268,
+              36.3936
+            ],
+            [
+              137.7269,
+              36.3936
+            ],
+            [
+              137.7269,
+              36.3937
+            ],
+            [
+              137.7268,
+              36.3937
+            ],
+            [
+              137.7268,
+              36.3936
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 60,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7267,
+              36.3936
+            ],
+            [
+              137.7268,
+              36.3936
+            ],
+            [
+              137.7268,
+              36.3937
+            ],
+            [
+              137.7267,
+              36.3937
+            ],
+            [
+              137.7267,
+              36.3936
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 14,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7267,
+              36.3937
+            ],
+            [
+              137.7268,
+              36.3937
+            ],
+            [
+              137.7268,
+              36.393800000000006
+            ],
+            [
+              137.7267,
+              36.393800000000006
+            ],
+            [
+              137.7267,
+              36.3937
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 42,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7266,
+              36.3937
+            ],
+            [
+              137.7267,
+              36.3937
+            ],
+            [
+              137.7267,
+              36.393800000000006
+            ],
+            [
+              137.7266,
+              36.393800000000006
+            ],
+            [
+              137.7266,
+              36.3937
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 26,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7266,
+              36.3938
+            ],
+            [
+              137.7267,
+              36.3938
+            ],
+            [
+              137.7267,
+              36.3939
+            ],
+            [
+              137.7266,
+              36.3939
+            ],
+            [
+              137.7266,
+              36.3938
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 20,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7265,
+              36.3938
+            ],
+            [
+              137.7266,
+              36.3938
+            ],
+            [
+              137.7266,
+              36.3939
+            ],
+            [
+              137.7265,
+              36.3939
+            ],
+            [
+              137.7265,
+              36.3938
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 44,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7264,
+              36.3938
+            ],
+            [
+              137.72650000000002,
+              36.3938
+            ],
+            [
+              137.72650000000002,
+              36.3939
+            ],
+            [
+              137.7264,
+              36.3939
+            ],
+            [
+              137.7264,
+              36.3938
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 2,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7264,
+              36.3939
+            ],
+            [
+              137.72650000000002,
+              36.3939
+            ],
+            [
+              137.72650000000002,
+              36.394000000000005
+            ],
+            [
+              137.7264,
+              36.394000000000005
+            ],
+            [
+              137.7264,
+              36.3939
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 134,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7264,
+              36.394
+            ],
+            [
+              137.72650000000002,
+              36.394
+            ],
+            [
+              137.72650000000002,
+              36.3941
+            ],
+            [
+              137.7264,
+              36.3941
+            ],
+            [
+              137.7264,
+              36.394
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 26,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7263,
+              36.394
+            ],
+            [
+              137.7264,
+              36.394
+            ],
+            [
+              137.7264,
+              36.3941
+            ],
+            [
+              137.7263,
+              36.3941
+            ],
+            [
+              137.7263,
+              36.394
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 52,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7262,
+              36.394
+            ],
+            [
+              137.7263,
+              36.394
+            ],
+            [
+              137.7263,
+              36.3941
+            ],
+            [
+              137.7262,
+              36.3941
+            ],
+            [
+              137.7262,
+              36.394
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 4,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7262,
+              36.3941
+            ],
+            [
+              137.7263,
+              36.3941
+            ],
+            [
+              137.7263,
+              36.394200000000005
+            ],
+            [
+              137.7262,
+              36.394200000000005
+            ],
+            [
+              137.7262,
+              36.3941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 44,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7263,
+              36.3941
+            ],
+            [
+              137.7264,
+              36.3941
+            ],
+            [
+              137.7264,
+              36.394200000000005
+            ],
+            [
+              137.7263,
+              36.394200000000005
+            ],
+            [
+              137.7263,
+              36.3941
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 29,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7263,
+              36.3942
+            ],
+            [
+              137.7264,
+              36.3942
+            ],
+            [
+              137.7264,
+              36.3943
+            ],
+            [
+              137.7263,
+              36.3943
+            ],
+            [
+              137.7263,
+              36.3942
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 60,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7264,
+              36.3942
+            ],
+            [
+              137.72650000000002,
+              36.3942
+            ],
+            [
+              137.72650000000002,
+              36.3943
+            ],
+            [
+              137.7264,
+              36.3943
+            ],
+            [
+              137.7264,
+              36.3942
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 20,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7263,
+              36.3943
+            ],
+            [
+              137.7264,
+              36.3943
+            ],
+            [
+              137.7264,
+              36.394400000000005
+            ],
+            [
+              137.7263,
+              36.394400000000005
+            ],
+            [
+              137.7263,
+              36.3943
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 82,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7263,
+              36.3944
+            ],
+            [
+              137.7264,
+              36.3944
+            ],
+            [
+              137.7264,
+              36.3945
+            ],
+            [
+              137.7263,
+              36.3945
+            ],
+            [
+              137.7263,
+              36.3944
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 112,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7262,
+              36.3944
+            ],
+            [
+              137.7263,
+              36.3944
+            ],
+            [
+              137.7263,
+              36.3945
+            ],
+            [
+              137.7262,
+              36.3945
+            ],
+            [
+              137.7262,
+              36.3944
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 14,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.726,
+              36.3945
+            ],
+            [
+              137.7261,
+              36.3945
+            ],
+            [
+              137.7261,
+              36.394600000000004
+            ],
+            [
+              137.726,
+              36.394600000000004
+            ],
+            [
+              137.726,
+              36.3945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 36,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7259,
+              36.3945
+            ],
+            [
+              137.726,
+              36.3945
+            ],
+            [
+              137.726,
+              36.394600000000004
+            ],
+            [
+              137.7259,
+              36.394600000000004
+            ],
+            [
+              137.7259,
+              36.3945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 34,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7258,
+              36.3945
+            ],
+            [
+              137.7259,
+              36.3945
+            ],
+            [
+              137.7259,
+              36.394600000000004
+            ],
+            [
+              137.7258,
+              36.394600000000004
+            ],
+            [
+              137.7258,
+              36.3945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 40,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7257,
+              36.3946
+            ],
+            [
+              137.7258,
+              36.3946
+            ],
+            [
+              137.7258,
+              36.3947
+            ],
+            [
+              137.7257,
+              36.3947
+            ],
+            [
+              137.7257,
+              36.3946
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 28,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7257,
+              36.3945
+            ],
+            [
+              137.7258,
+              36.3945
+            ],
+            [
+              137.7258,
+              36.394600000000004
+            ],
+            [
+              137.7257,
+              36.394600000000004
+            ],
+            [
+              137.7257,
+              36.3945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 10,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7256,
+              36.3945
+            ],
+            [
+              137.7257,
+              36.3945
+            ],
+            [
+              137.7257,
+              36.394600000000004
+            ],
+            [
+              137.7256,
+              36.394600000000004
+            ],
+            [
+              137.7256,
+              36.3945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 24,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7256,
+              36.3946
+            ],
+            [
+              137.7257,
+              36.3946
+            ],
+            [
+              137.7257,
+              36.3947
+            ],
+            [
+              137.7256,
+              36.3947
+            ],
+            [
+              137.7256,
+              36.3946
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 68,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7256,
+              36.3947
+            ],
+            [
+              137.7257,
+              36.3947
+            ],
+            [
+              137.7257,
+              36.394800000000004
+            ],
+            [
+              137.7256,
+              36.394800000000004
+            ],
+            [
+              137.7256,
+              36.3947
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 82,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7256,
+              36.3948
+            ],
+            [
+              137.7257,
+              36.3948
+            ],
+            [
+              137.7257,
+              36.3949
+            ],
+            [
+              137.7256,
+              36.3949
+            ],
+            [
+              137.7256,
+              36.3948
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 58,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7257,
+              36.3948
+            ],
+            [
+              137.7258,
+              36.3948
+            ],
+            [
+              137.7258,
+              36.3949
+            ],
+            [
+              137.7257,
+              36.3949
+            ],
+            [
+              137.7257,
+              36.3948
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 14,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7255,
+              36.3948
+            ],
+            [
+              137.72560000000001,
+              36.3948
+            ],
+            [
+              137.72560000000001,
+              36.3949
+            ],
+            [
+              137.7255,
+              36.3949
+            ],
+            [
+              137.7255,
+              36.3948
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 48,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7254,
+              36.3948
+            ],
+            [
+              137.7255,
+              36.3948
+            ],
+            [
+              137.7255,
+              36.3949
+            ],
+            [
+              137.7254,
+              36.3949
+            ],
+            [
+              137.7254,
+              36.3948
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 67,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7253,
+              36.3948
+            ],
+            [
+              137.7254,
+              36.3948
+            ],
+            [
+              137.7254,
+              36.3949
+            ],
+            [
+              137.7253,
+              36.3949
+            ],
+            [
+              137.7253,
+              36.3948
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 56,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7254,
+              36.3949
+            ],
+            [
+              137.7255,
+              36.3949
+            ],
+            [
+              137.7255,
+              36.395
+            ],
+            [
+              137.7254,
+              36.395
+            ],
+            [
+              137.7254,
+              36.3949
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 58,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7255,
+              36.3949
+            ],
+            [
+              137.72560000000001,
+              36.3949
+            ],
+            [
+              137.72560000000001,
+              36.395
+            ],
+            [
+              137.7255,
+              36.395
+            ],
+            [
+              137.7255,
+              36.3949
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 44,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7255,
+              36.395
+            ],
+            [
+              137.72560000000001,
+              36.395
+            ],
+            [
+              137.72560000000001,
+              36.395100000000006
+            ],
+            [
+              137.7255,
+              36.395100000000006
+            ],
+            [
+              137.7255,
+              36.395
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 26,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7256,
+              36.395
+            ],
+            [
+              137.7257,
+              36.395
+            ],
+            [
+              137.7257,
+              36.395100000000006
+            ],
+            [
+              137.7256,
+              36.395100000000006
+            ],
+            [
+              137.7256,
+              36.395
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 86,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7256,
+              36.3951
+            ],
+            [
+              137.7257,
+              36.3951
+            ],
+            [
+              137.7257,
+              36.3952
+            ],
+            [
+              137.7256,
+              36.3952
+            ],
+            [
+              137.7256,
+              36.3951
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 2,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7257,
+              36.395
+            ],
+            [
+              137.7258,
+              36.395
+            ],
+            [
+              137.7258,
+              36.395100000000006
+            ],
+            [
+              137.7257,
+              36.395100000000006
+            ],
+            [
+              137.7257,
+              36.395
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 46,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7257,
+              36.3951
+            ],
+            [
+              137.7258,
+              36.3951
+            ],
+            [
+              137.7258,
+              36.3952
+            ],
+            [
+              137.7257,
+              36.3952
+            ],
+            [
+              137.7257,
+              36.3951
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 0,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 5,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
               131.331,
               32.8209
             ],
@@ -114618,6 +116100,123 @@
         "Weather": "曇",
         "WindDirection": "西",
         "WindStrength": "強",
+        "DataCount": 42,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7268,
+              36.3937
+            ],
+            [
+              137.7269,
+              36.3937
+            ],
+            [
+              137.7269,
+              36.393800000000006
+            ],
+            [
+              137.7268,
+              36.393800000000006
+            ],
+            [
+              137.7268,
+              36.3937
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 1,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 5,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7262,
+              36.3945
+            ],
+            [
+              137.7263,
+              36.3945
+            ],
+            [
+              137.7263,
+              36.394600000000004
+            ],
+            [
+              137.7262,
+              36.394600000000004
+            ],
+            [
+              137.7262,
+              36.3945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 1,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
+        "DataCount": 26,
+        "surveyType": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              137.7261,
+              36.3945
+            ],
+            [
+              137.7262,
+              36.3945
+            ],
+            [
+              137.7262,
+              36.394600000000004
+            ],
+            [
+              137.7261,
+              36.394600000000004
+            ],
+            [
+              137.7261,
+              36.3945
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "Carrier": "docomo",
+        "SignalLevel": 1,
+        "Weather": "-",
+        "WindDirection": "",
+        "WindStrength": "無風",
         "DataCount": 42,
         "surveyType": "outdoor"
       }
