@@ -107,6 +107,126 @@
           0.0
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{0ec2bc06-1c94-4471-be30-c94b923b9f82}",
+        "name": "ミヤマキンバイ",
+        "status": "見頃",
+        "radius_m": 20.0,
+        "date": "2026-06-09",
+        "photo": "https://drive.google.com/thumbnail?id=1MjIv46ua_Xrv4FZkCZJY-KTYW2CkKTVH&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7071528080998,
+          36.388547039178,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{807aef76-e1db-4de3-977e-236fb5b8e2f1}",
+        "name": "イワウメ",
+        "status": "見頃",
+        "radius_m": 20.0,
+        "date": "2026-06-09",
+        "photo": "https://drive.google.com/thumbnail?id=1A9kqxjeSYQ9egMCmgTULyDZ_QNeJio0S&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.70735274618545,
+          36.388756974167926,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{03ca3445-4aa2-482c-b8b2-247f6efce75c}",
+        "name": "ミヤマキンバイ",
+        "status": "見頃",
+        "radius_m": 50.0,
+        "date": "2026-06-09",
+        "photo": "https://drive.google.com/thumbnail?id=19nFerhgeiQUFuYTbJOnkbj16ltioaMmZ&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.70858236541216,
+          36.391866011399685,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{03ca3445-4aa2-482c-b8b2-247f6efce75c}",
+        "name": "ミヤマキンバイ",
+        "status": "咲き始め",
+        "radius_m": 50.0,
+        "date": "2026-06-09",
+        "photo": "https://drive.google.com/thumbnail?id=1COcN8Md2dSft5TJtMZJVPi868DrQxn8b&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.70858236541216,
+          36.391866011399685,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{22ac44f5-5997-4fe9-bb5f-d75a38e72760}",
+        "name": "ミヤマキンバイ",
+        "status": "見頃",
+        "radius_m": 50.0,
+        "date": "2026-06-09",
+        "photo": "https://drive.google.com/thumbnail?id=1cEjMXHKQjodEd-lqSPouwpuWeXMhTZCh&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7093603620573,
+          36.3930231631813,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{22ac44f5-5997-4fe9-bb5f-d75a38e72760}",
+        "name": "ミヤマキンバイ",
+        "status": "見頃",
+        "radius_m": 50.0,
+        "date": "2026-06-09",
+        "photo": "https://drive.google.com/thumbnail?id=1EvsdYOXJYKuLPxNJzySRy_BQmKdxpzXB&sz=w800",
+        "memo": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7093603620573,
+          36.3930231631813,
+          0.0
+        ]
+      }
     }
   ]
 }
