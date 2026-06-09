@@ -126,6 +126,57 @@
           36.39868741674638
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "雷鳥",
+        "date": "2026-05-08",
+        "weather": "晴れ",
+        "memo": "強い西風が吹いていてハイマツの茂みのすぐ横にうずくまっていた",
+        "photo": "DCIM/animal-survey_20260509075028311.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.71460792820724,
+          36.39910065064359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "雷鳥",
+        "date": "2026-06-09",
+        "weather": "晴れ",
+        "memo": "東側ほ晴れて西側は曇。オス単体",
+        "photo": "DCIM/animal-survey_20260609195114643.jpg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7095250219125,
+          36.393533862295115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "雷鳥",
+        "date": "2026-06-09",
+        "weather": "晴れ",
+        "memo": "東側は晴れて西側は曇。オス単体",
+        "photo": "DCIM/animal-survey_20260609202002764.JPG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.71433393164156,
+          36.39832492362458
+        ]
+      }
     }
   ]
 }
