@@ -122,8 +122,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          137.7071528080998,
-          36.388547039178,
+          137.70787310807285,
+          36.390209748366296,
           0.0
         ]
       }
@@ -142,8 +142,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          137.70735274618545,
-          36.388756974167926,
+          137.7080329654726,
+          36.39047280749469,
           0.0
         ]
       }
@@ -171,10 +171,10 @@
     {
       "type": "Feature",
       "properties": {
-        "site_id": "{03ca3445-4aa2-482c-b8b2-247f6efce75c}",
-        "name": "ミヤマキンバイ",
+        "site_id": "{22e2bc98-9173-4d0b-b2e8-6703461dfeb1}",
+        "name": "不明",
         "status": "咲き始め",
-        "radius_m": 50.0,
+        "radius_m": 10.0,
         "date": "2026-06-09",
         "photo": "https://drive.google.com/thumbnail?id=1COcN8Md2dSft5TJtMZJVPi868DrQxn8b&sz=w800",
         "memo": null
@@ -182,8 +182,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          137.70858236541216,
-          36.391866011399685,
+          137.70870294151692,
+          36.39204853084009,
           0.0
         ]
       }
@@ -211,8 +211,8 @@
     {
       "type": "Feature",
       "properties": {
-        "site_id": "{22ac44f5-5997-4fe9-bb5f-d75a38e72760}",
-        "name": "ミヤマキンバイ",
+        "site_id": "{986855e8-cc0d-49c0-a5b7-fca9074dfb36}",
+        "name": "イワウメ",
         "status": "見頃",
         "radius_m": 50.0,
         "date": "2026-06-09",
@@ -222,8 +222,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          137.7093603620573,
-          36.3930231631813,
+          137.7094816289712,
+          36.39335094679031,
           0.0
         ]
       }
