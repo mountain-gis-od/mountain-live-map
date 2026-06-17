@@ -1,17 +1,182 @@
 {
-"type": "FeatureCollection",
-"name": "animal_survey",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "name": "テスト動物", "date": "2026-04-10", "weather": "曇り", "memo": "テスト", "photo": "DCIM/animal-survey_20260411230525297.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.172238080824343, 35.848513038286491 ] } },
-{ "type": "Feature", "properties": { "name": "テスト動物A", "date": "2026-03-30", "weather": "曇り", "memo": "テスト", "photo": "DCIM/animal-survey_20260411231839233.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.159219086918483, 35.857167034395211 ] } },
-{ "type": "Feature", "properties": { "name": "テスト動物B", "date": "2026-04-06", "weather": "晴れ", "memo": "テスト", "photo": "DCIM/animal-survey_20260411231923935.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.159928485019577, 35.856007774083686 ] } },
-{ "type": "Feature", "properties": { "name": "テスト動物C", "date": "2026-04-11", "weather": "晴れ", "memo": "テスト", "photo": "DCIM/animal-survey_20260411232017677.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.163960102563038, 35.859621898285084 ] } },
-{ "type": "Feature", "properties": { "name": "テスト動物D", "date": "2026-04-15", "weather": "晴れ", "memo": "テスト", "photo": "DCIM/animal-survey_20260411232713979.jpg" }, "geometry": { "type": "Point", "coordinates": [ 139.180604192551868, 35.867716077091302 ] } },
-{ "type": "Feature", "properties": { "name": "雷鳥", "date": "2026-05-01", "weather": "雨", "memo": "周りは濃い霧に包まれていました。", "photo": "DCIM/animal-survey_20260501195600968.jpg" }, "geometry": { "type": "Point", "coordinates": [ 137.714867889702759, 36.39984049666414 ] } },
-{ "type": "Feature", "properties": { "name": "霧氷", "date": "2026-05-02", "weather": "晴れ", "memo": "昨日が雨のためできた霧氷", "photo": "DCIM/animal-survey_20260502082525286.jpg" }, "geometry": { "type": "Point", "coordinates": [ 137.715412836068197, 36.398687416746377 ] } },
-{ "type": "Feature", "properties": { "name": "雷鳥", "date": "2026-05-08", "weather": "晴れ", "memo": "強い西風が吹いていてハイマツの茂みのすぐ横にうずくまっていた", "photo": "DCIM/animal-survey_20260509075028311.jpg" }, "geometry": { "type": "Point", "coordinates": [ 137.714607928207244, 36.399100650643589 ] } },
-{ "type": "Feature", "properties": { "name": "雷鳥", "date": "2026-06-09", "weather": "晴れ", "memo": "東側ほ晴れて西側は曇。オス単体", "photo": "DCIM/animal-survey_20260609195114643.jpg" }, "geometry": { "type": "Point", "coordinates": [ 137.709525021912498, 36.393533862295115 ] } },
-{ "type": "Feature", "properties": { "name": "雷鳥", "date": "2026-06-09", "weather": "晴れ", "memo": "東側は晴れて西側は曇。オス単体", "photo": "DCIM/animal-survey_20260609202002764.JPG" }, "geometry": { "type": "Point", "coordinates": [ 137.714333931641562, 36.398324923624578 ] } }
-]
+  "type": "FeatureCollection",
+  "name": "animal_survey",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "テスト動物",
+        "date": "2026-04-10",
+        "weather": "曇り",
+        "memo": "テスト",
+        "photo": "https://drive.google.com/thumbnail?id=1XTNPwe-g-jky8xm9LYktBc12vXB_nZ-V&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.17223808082434,
+          35.84851303828649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "テスト動物A",
+        "date": "2026-03-30",
+        "weather": "曇り",
+        "memo": "テスト",
+        "photo": "https://drive.google.com/thumbnail?id=13XaW4XBSJQ0v_H6_Kb5H8YcndutN6_hC&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.15921908691848,
+          35.85716703439521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "テスト動物B",
+        "date": "2026-04-06",
+        "weather": "晴れ",
+        "memo": "テスト",
+        "photo": "https://drive.google.com/thumbnail?id=1ptVVBWndS29qQu-K-IGVBUhiTX2Cs7FN&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.15992848501958,
+          35.856007774083686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "テスト動物C",
+        "date": "2026-04-11",
+        "weather": "晴れ",
+        "memo": "テスト",
+        "photo": "https://drive.google.com/thumbnail?id=1rGj2X507TLiw9Bz2PIiFtZ6b6LUjiF4n&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.16396010256304,
+          35.859621898285084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "テスト動物D",
+        "date": "2026-04-15",
+        "weather": "晴れ",
+        "memo": "テスト",
+        "photo": "https://drive.google.com/thumbnail?id=1QarN6jyRiW-Ng8GNpS-OVP357A5rsNkz&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.18060419255187,
+          35.8677160770913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "雷鳥",
+        "date": "2026-05-01",
+        "weather": "雨",
+        "memo": "周りは濃い霧に包まれていました。",
+        "photo": "https://drive.google.com/thumbnail?id=1C_s03ECrwqQYmTJaJRGZWZkjAG4_Y1fN&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.71486788970276,
+          36.39984049666414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "霧氷",
+        "date": "2026-05-02",
+        "weather": "晴れ",
+        "memo": "昨日が雨のためできた霧氷",
+        "photo": "https://drive.google.com/thumbnail?id=1GErTSjGOk1NjRJ8VeFNmVup0XpxfKKXy&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7154128360682,
+          36.39868741674638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "雷鳥",
+        "date": "2026-05-08",
+        "weather": "晴れ",
+        "memo": "強い西風が吹いていてハイマツの茂みのすぐ横にうずくまっていた",
+        "photo": "https://drive.google.com/thumbnail?id=1Tl4HxJ6FPlL87VPGRv6W2O9VBUAg63vD&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.71460792820724,
+          36.39910065064359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "雷鳥",
+        "date": "2026-06-09",
+        "weather": "晴れ",
+        "memo": "東側ほ晴れて西側は曇。オス単体",
+        "photo": "https://drive.google.com/thumbnail?id=1-tpC6nKHbAgl5gNdJ98-oCnLFj8MKiDX&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.7095250219125,
+          36.393533862295115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "雷鳥",
+        "date": "2026-06-09",
+        "weather": "晴れ",
+        "memo": "東側は晴れて西側は曇。オス単体",
+        "photo": "https://drive.google.com/thumbnail?id=1bPiKFk5OcoRiAO3xydW_zajnWbJsnoDU&sz=w800"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.71433393164156,
+          36.39832492362458
+        ]
+      }
+    }
+  ]
 }
