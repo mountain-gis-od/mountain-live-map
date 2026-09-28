@@ -1,10 +1,72 @@
 {
-"type": "FeatureCollection",
-"name": "autumn_survey",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "site_id": "{4fdf44ef-0ad6-446b-af46-22addd545425}", "name": "テスト木", "status": "色づき始め", "radius_m": 100.0, "date": "2026-04-10", "photo": "files/autumn-survey_20260411230419252_PXL_20260403_082457236.jpg", "memo": "テスト" }, "geometry": { "type": "Point", "coordinates": [ 139.171479958408781, 35.848536729611986, 0.0 ] } },
-{ "type": "Feature", "properties": { "site_id": "{19554bf4-28a1-4bd8-bb3c-e1658e8710e8}", "name": "テスト紅葉A", "status": "青葉", "radius_m": 500.0, "date": "2026-03-29", "photo": "files/autumn-survey_20260411231751030_PXL_20260403_041202344.jpg", "memo": "テスト" }, "geometry": { "type": "Point", "coordinates": [ 139.155007026604352, 35.858698887106485, 0.0 ] } },
-{ "type": "Feature", "properties": { "site_id": "{068a5003-b86c-46cc-8250-82ef2256c797}", "name": "テスト紅葉B", "status": "見頃", "radius_m": 600.0, "date": "2026-04-13", "photo": "files/autumn-survey_20260411232621496_PXL_20260402_045816265.jpg", "memo": "テスト" }, "geometry": { "type": "Point", "coordinates": [ 139.163687127253098, 35.850956624202134, 0.0 ] } }
-]
+  "type": "FeatureCollection",
+  "name": "autumn_survey",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{4fdf44ef-0ad6-446b-af46-22addd545425}",
+        "name": "テスト木",
+        "status": "色づき始め",
+        "radius_m": 100.0,
+        "date": "2026-04-10",
+        "photo": "https://drive.google.com/thumbnail?id=1fTXOJhEYNATmXn2ep7sQ5bWotENwTvu0&sz=w800",
+        "memo": "テスト"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.17147995840878,
+          35.848536729611986,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{19554bf4-28a1-4bd8-bb3c-e1658e8710e8}",
+        "name": "テスト紅葉A",
+        "status": "青葉",
+        "radius_m": 500.0,
+        "date": "2026-03-29",
+        "photo": "https://drive.google.com/thumbnail?id=1lyvr0XDsVHZstZZ0nS-pqD0pFVqJQr_A&sz=w800",
+        "memo": "テスト"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.15500702660435,
+          35.858698887106485,
+          0.0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "site_id": "{068a5003-b86c-46cc-8250-82ef2256c797}",
+        "name": "テスト紅葉B",
+        "status": "見頃",
+        "radius_m": 600.0,
+        "date": "2026-04-13",
+        "photo": "https://drive.google.com/thumbnail?id=1To2dj3YZEH-76vuvouLb-dHHypw7HFkq&sz=w800",
+        "memo": "テスト"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.1636871272531,
+          35.850956624202134,
+          0.0
+        ]
+      }
+    }
+  ]
 }
